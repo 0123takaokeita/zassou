@@ -81,7 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: zassou_production
-  username: zassou
-  password: <%= ENV["ZASSOU_DATABASE_PASSWORD"] %>
-  url: <%= ENV['DATABASE_URL'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  database: zassou
