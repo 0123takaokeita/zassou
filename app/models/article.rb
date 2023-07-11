@@ -1,10 +1,14 @@
 class Article < ApplicationRecord
   include Visible
 
+  # 記事が削除されたら、その記事に関連するコメントも削除する
   has_many :comments, dependent: :destroy
 
+  # title必須
   validates :title, presence: true
-  validates :body, presence: true, length: { minimum: 10 }
+
+  # bodyは8文字以上
+  validates :body, presence: true, length: { minimum: 8 }
 end
 
 # == Schema Information
