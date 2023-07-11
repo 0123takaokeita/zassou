@@ -1,11 +1,9 @@
 <% unless comment.archived? %>
   <p>
-    <string>Commenter:</string>
-    <%= comment.commenter %>
+    <strong>Commenter:</strong> <%= comment.commenter %>
   </p>
   <p>
-    <string>Comment:</string>
-    <%= comment.body%>
+    <strong>Comment:</strong> <%= comment.body %>
   </p>
   <p>
   <%= link_to 'Destroy Comment', [comment.article, comment], data: {
