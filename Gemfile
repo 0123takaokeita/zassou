@@ -76,3 +76,5 @@ group :test do
 end
 
 gem 'tailwindcss-rails', '~> 2.0'
+
+gem "hotwire-livereload", "~> 1.2", :group => :development
